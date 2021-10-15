@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Multivideo</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <script src="../settings.js"></script>
+  </head>
+  <custom-style>
+    <style>
+      html {
+        font-size: 14px;
+        min-height: 1px;
+        height: 100%;
+      }
+
+      html input {
+        padding: 0;
+      }
+
+      body {
+        /* margin: 0;
+        overflow: hidden;
+        font-size: 14px;
+        font-family: 'Roboto', 'Noto', sans-serif;
+        height: 100vh; */
+
+        position: fixed;
+        margin: 0;
+        overflow: hidden;
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        /* height: -webkit-fill-available; */
+        min-height: 1px;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </custom-style>
+  <body>
+    
+    <script src="https://multi2.videoconsulta.catsalut.cat/external_api.js"></script>
+    <script>
+        const domain = 'multi2.videoconsulta.catsalut.cat';
+        const urlParams = new URLSearchParams(window.location.search);
+        const jwt = urlParams.get('jwt');
+        const options = {
+            roomName: 'prova',
+        }
+        const api = new JitsiMeetExternalAPI(domain, options);
+    </script>
+  </body>
+</html>
