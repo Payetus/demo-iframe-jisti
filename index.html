@@ -48,6 +48,7 @@
         const jwt = urlParams.get('jwt');
         const options = {
             roomName: 'prova',
+            jwt: jwt,
         }
         const api = new JitsiMeetExternalAPI(domain, options);
     </script>
